@@ -8,7 +8,8 @@ jobs: # For running a series of steps that run a series of commands.
     docker: # Specify the primary container image.
       - image: "cimg/base:stable"
     steps: # A collection of excutable commands required to complete your job.
-      - node/install # install node.
+      - node/install:
+          version: 14.15
       - checkout # check the source code.
       - aws-cli/setup # install aws cli.
       - eb/setup # install eb cli.
