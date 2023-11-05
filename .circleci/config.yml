@@ -1,6 +1,6 @@
 version: 2.1
 orbs: # declaring the orbs for setting up the servers and softwares during the CI/CD process.
-  node: circleci/node@5.0.1 # setup node.js on the server.
+  node: circleci/node@14.15.1 # setup node.js on the server.
   aws-cli: circleci/aws-cli@3.0.0 # setup aws cli on the server.
   eb: circleci/aws-elastic-beanstalk@2.0.1 # set up eb on the server.
 jobs: # For running a series of steps that run a series of commands.
@@ -8,8 +8,7 @@ jobs: # For running a series of steps that run a series of commands.
     docker: # Specify the primary container image.
       - image: "cimg/base:stable"
     steps: # A collection of excutable commands required to complete your job.
-      - node/install:
-          version: 14.15
+      - node/install
       - checkout # check the source code.
       - aws-cli/setup # install aws cli.
       - eb/setup # install eb cli.
