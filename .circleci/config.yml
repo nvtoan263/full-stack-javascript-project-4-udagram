@@ -6,9 +6,10 @@ orbs: # declaring the orbs for setting up the servers and softwares during the C
 jobs: # For running a series of steps that run a series of commands.
   CI_CD:
     docker: # Specify the primary container image.
-      - image: "cimg/node:14.15.1"
+      - image: "cimg/node:14.17"
     steps: # A collection of excutable commands required to complete your job.
-      - node/install # install node.
+      - node/install:
+          node-version: "14.17"
       - checkout # check the source code.
       - aws-cli/setup # install aws cli.
       - eb/setup # install eb cli.
