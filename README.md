@@ -50,7 +50,8 @@ Unit tests are using the Jasmine Framework.
 ### End to End Tests:
 
 The e2e tests are using Protractor and Jasmine.
-
+### Link to Frontend Application
+[Link to Frontend Application](http://udagram-bucket-toannv15.s3-website-us-east-1.amazonaws.com)
 ## Documentation
 
 - Screenshots: `./deployment-process/screenshots/`.
